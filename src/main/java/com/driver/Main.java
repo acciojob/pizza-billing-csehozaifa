@@ -18,6 +18,8 @@ public class Main {
 
      */
     DeluxePizza dp = new DeluxePizza(true);
+    System.out.println(dp.getPrice());
+    dp.addExtraCheese();
     dp.addExtraCheese();
     dp.addExtraToppings();
     dp.addTakeaway();
@@ -25,7 +27,14 @@ public class Main {
 
     Pizza p = new Pizza(false);
     p.addExtraCheese();
+    p.addExtraCheese();
+    p.addExtraCheese();
+    p.addExtraCheese();
+    p.addExtraCheese();
     p.addExtraToppings();
+    p.addTakeaway();
+    p.getBill();
+    p.getBill();
     System.out.println(p.getBill());
   }
 }
