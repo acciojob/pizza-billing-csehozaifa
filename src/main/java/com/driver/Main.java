@@ -18,16 +18,14 @@ public class Main {
 
      */
     DeluxePizza dp = new DeluxePizza(true);
-    System.out.println(dp.getPrice());
     dp.addExtraCheese();
+    dp.addExtraToppings();
     dp.addTakeaway();
-    dp.addTakeaway(); // Adding takeaway twice to test if it doesn't duplicate
     System.out.println(dp.getBill());
 
-    Pizza p = new Pizza(true);
+    Pizza p = new Pizza(false);
     p.addExtraCheese();
     p.addExtraToppings();
-    p.addTakeaway();
     System.out.println(p.getBill());
   }
 }

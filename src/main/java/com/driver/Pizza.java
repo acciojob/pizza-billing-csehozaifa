@@ -95,9 +95,9 @@ public int cheesePrice;
     boolean isPaperBagAdded;
     boolean isBillGenerated;
 
-    public Pizza(Boolean isVeg){
+    public Pizza(Boolean isVeg) {
 
-        if(isVeg){
+        if (isVeg) {
             basePrice = 300;
             toppingsPrice = 70;
         } else {
@@ -113,40 +113,40 @@ public int cheesePrice;
         bill = "Base Price Of The Pizza: " + basePrice + "\n";
     }
 
-    public int getPrice(){
+    public int getPrice() {
         return totalPrice;
     }
 
-    public void addExtraCheese(){
-        if(!isCheeseAdded) {
+    public void addExtraCheese() {
+        if (!isCheeseAdded) {
             totalPrice += cheesePrice;
             isCheeseAdded = true;
         }
     }
 
-    public void addExtraToppings(){
-        if(!isToppingsAdded){
+    public void addExtraToppings() {
+        if (!isToppingsAdded) {
             totalPrice += toppingsPrice;
             isToppingsAdded = true;
         }
     }
 
-    public void addTakeaway(){
-        if(!isPaperBagAdded){
+    public void addTakeaway() {
+        if (!isPaperBagAdded) {
             totalPrice += paperBagPrice;
             isPaperBagAdded = true;
         }
     }
 
-    public String getBill(){
-        if(!isBillGenerated){
-            if(isCheeseAdded){
+    public String getBill() {
+        if (!isBillGenerated) {
+            if (isCheeseAdded) {
                 bill = bill + "Extra Cheese Added: " + cheesePrice + "\n";
             }
-            if(isToppingsAdded){
+            if (isToppingsAdded) {
                 bill = bill + "Extra Toppings Added: " + toppingsPrice + "\n";
             }
-            if(isPaperBagAdded){
+            if (isPaperBagAdded) {
                 bill = bill + "Paperbag Added: " + paperBagPrice + "\n";
             }
             bill = bill + "Total Price: " + totalPrice + "\n";
