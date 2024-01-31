@@ -42,7 +42,7 @@ public class Pizza {
 
     public void addExtraCheese(){
         // your code goes here
-        if(isCheeseAdded==false) {
+        if(!isCheeseAdded) {
             totalPrice = totalPrice + cheesePrice;
             isCheeseAdded=true; //so to prevent it from adding again
         }
@@ -50,7 +50,7 @@ public class Pizza {
 
     public void addExtraToppings(){
         // your code goes here
-        if(isToppingsAdded==false){
+        if(!isToppingsAdded){
             totalPrice=totalPrice+toppingsPrice;
             isToppingsAdded=true;
         }
@@ -58,7 +58,7 @@ public class Pizza {
 
     public void addTakeaway(){
         // your code goes here
-        if(isPaperBagAdded==false){
+        if(!isPaperBagAdded){
             totalPrice=totalPrice+paperBagPrice;
             isPaperBagAdded=true;
         }
@@ -67,14 +67,14 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        if(isBillGenerated==false){
-            if(isCheeseAdded==true){
+        if(!isBillGenerated){
+            if(isCheeseAdded){
                 bill=bill+"Extra Cheese Added: "+cheesePrice + "\n";
             }
-            if(isToppingsAdded==true){
+            if(isToppingsAdded){
                 bill=bill+"Extra Toppings Added: "+toppingsPrice + "\n";
             }
-            if(isPaperBagAdded==true){
+            if(isPaperBagAdded){
                 bill=bill+"Paperbag Added: "+paperBagPrice + "\n";
             }
             bill=bill+"Total Price:"+totalPrice + "\n";
